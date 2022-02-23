@@ -71,11 +71,11 @@ export class PosestiPodatkiService {
   }
 
   wipe(){
-    return this.http.get(this.uri+"db/wipe")
+    return this.http.get(this.uri+"dbapi/wipe")
   }
 
   fill(){
-    return this.http.get(this.uri+"db/fill")
+    return this.http.get(this.uri+"dbapi/fill")
   }
 
 }

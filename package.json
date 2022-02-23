@@ -1,0 +1,19 @@
+{
+  "name": "ceta-monopoly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "monopoly/index.js",
+  "scripts": {
+    "poskus": "cd monopoly && ng build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mr2160/-eta-Monopoly.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mr2160/-eta-Monopoly/issues"
+  },
+  "homepage": "https://github.com/mr2160/-eta-Monopoly#readme"
+}

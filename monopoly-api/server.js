@@ -31,13 +31,18 @@ db.on('error', (err) => console.error(err))
 db.once('open', () => console.log("Connected to database"))
 
 app.use(express.json())
-
+app.use(express.static(process.cwd()+"/../monopoly/dist/monopoly/"));
 const posestiRouter = require("./routes/posesti")
 app.use('/posesti', posestiRouter)
 
 const dbRouter = require("./routes/db")
-app.use('/db', dbRouter)
+app.use('/dbapi', dbRouter)
 
 const vodiRouter = require("./routes/vodi")
 app.use('/vodi', vodiRouter)
+
+app.get('/', (req,res) => {
+    res.sendFile(process.cwd()+"/../monopoly/dist/monopoly/index.html")
+  });
+
 app.listen(port, () => console.log("Server started"))
