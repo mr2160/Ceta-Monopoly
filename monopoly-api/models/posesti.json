@@ -1,0 +1,176 @@
+[{
+    "ime": "Kersmancev park",
+    "cena": 10000,
+    "barva": "#ff0400",
+    "hise": 0,
+    "doprinesenaVrednost": 0
+},
+{
+    "ime": "Park Evropa",
+    "cena": 10000,
+    "barva": "#ff0400",
+    "hise": 0,
+    "doprinesenaVrednost": 0
+},
+{
+    "ime": "Spomenik Francetu Balanticu",
+    "cena": 10000,
+    "barva": "#ff0400",
+    "hise": 0,
+    "doprinesenaVrednost": 0
+},
+{
+    "ime": "Drsalisce",
+    "cena": 30000,
+    "barva": "#00661d",
+    "hise": 0,
+    "doprinesenaVrednost": 0
+},
+{
+    "ime": "Trznica",
+    "cena": 30000,
+    "barva": "#00661d",
+    "hise": 0,
+    "doprinesenaVrednost": 0
+},
+{
+    "ime": "Muzej na prostem Zaprice",
+    "cena": 30000,
+    "barva": "#00661d",
+    "hise": 0,
+    "doprinesenaVrednost": 0
+},
+{
+    "ime": "Rojstna hisa Rudolfa Maistra",
+    "cena": 30000,
+    "barva": "#00661d",
+    "hise": 0,
+    "doprinesenaVrednost": 0
+},
+{
+    "ime": "Pokopalisce Kamnik",
+    "cena": 60000,
+    "barva": "#6500b3",
+    "hise": 0,
+    "doprinesenaVrednost": 0
+},
+{
+    "ime": "AP Kamnik",
+    "cena": 60000,
+    "barva": "#6500b3",
+    "hise": 0,
+    "doprinesenaVrednost": 0
+},
+{
+    "ime": "Spomenik generala Rudolfa Maistra",
+    "cena": 60000,
+    "barva": "#6500b3",
+    "hise": 0,
+    "doprinesenaVrednost": 0
+},
+{
+    "ime": "Spominska fontana",
+    "cena": 60000,
+    "barva": "#6500b3",
+    "hise": 0,
+    "doprinesenaVrednost": 0
+},
+{
+    "ime": "Cerkveni stolp v Kamniku",
+    "cena": 90000,
+    "barva": "#ebc700",
+    "hise": 0,
+    "doprinesenaVrednost": 0
+},
+{
+    "ime": "Franciskanski samostan",
+    "cena": 100000,
+    "barva": "#00cbeb",
+    "hise": 0,
+    "doprinesenaVrednost": 0
+},
+{
+    "ime": "Policijska postaja",
+    "cena": 100000,
+    "barva": "#00cbeb",
+    "hise": 0,
+    "doprinesenaVrednost": 0
+},
+{
+    "ime": "Knjiznica Franceta Balantica",
+    "cena": 100000,
+    "barva": "#00cbeb",
+    "hise": 0,
+    "doprinesenaVrednost": 0
+},
+{
+    "ime": "Osnovna sola Toma Brejca",
+    "cena": 100000,
+    "barva": "#00cbeb",
+    "hise": 0,
+    "doprinesenaVrednost": 0
+},
+{
+    "ime": "Zdravstveni dom",
+    "cena": 100000,
+    "barva": "#00cbeb",
+    "hise": 0,
+    "doprinesenaVrednost": 0
+},
+{
+    "ime": "Zelezniska postaja Kamnik mesto",
+    "cena": 100000,
+    "barva": "#00cbeb",
+    "hise": 0,
+    "doprinesenaVrednost": 0
+},
+{
+    "ime": "Zlata pticka",
+    "cena": 120000,
+    "barva": "#eb0089",
+    "hise": 0,
+    "doprinesenaVrednost": 0
+},
+{
+    "ime": "Guest House Pri Cesarju",
+    "cena": 120000,
+    "barva": "#eb0089",
+    "hise": 0,
+    "doprinesenaVrednost": 0
+},
+{
+    "ime": "Kavarna Veronika",
+    "cena": 120000,
+    "barva": "#eb0089",
+    "hise": 0,
+    "doprinesenaVrednost": 0
+},
+{
+    "ime": "Dom Kulture Kamnik",
+    "cena": 160000,
+    "barva": "#4cff00",
+    "hise": 0,
+    "doprinesenaVrednost": 0
+},
+{
+    "ime": "Zelezniska postaja",
+    "cena": 160000,
+    "barva": "#4cff00",
+    "hise": 0,
+    "doprinesenaVrednost": 0
+},
+{
+    "ime": "Nogometni stadion Mekinje",
+    "cena": 200000,
+    "barva": "#0004ff",
+    "hise": 0,
+    "doprinesenaVrednost": 0
+},
+{
+    "ime": "Mali grad",
+    "cena": 200000,
+    "barva": "#0004ff",
+    "hise": 0,
+    "doprinesenaVrednost": 0
+}
+]

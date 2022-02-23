@@ -1,0 +1,14 @@
+<body class="text-center vertical-center align-items-center row">
+    <div class="container">
+        <h2 class="color-danger animacija">! TOLE ČISTO ZARES IZBRIŠE VSE PODATKE IZ BAZE !</h2>
+    </div>
+    <div class="container">
+        <a class="m-2 btn btn-danger" (click)="wipe()">Izprazni bazo</a>
+        <a class="m-2 btn btn-primary" href="/moderator">Nazaj na varnost moderatorjeve strani</a>
+        <a class="m-2 btn btn-success"(click)="fill()">Napolni bazo</a>
+    </div>
+    <h5 class="color-danger">{{this.opozorilo}}</h5>
+    <div class="container">
+        <h2 class="color-danger animacija">! UPAM, DA VEŠ, KAJ DELAŠ !</h2>
+    </div>
+</body>

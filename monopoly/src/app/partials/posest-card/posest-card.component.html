@@ -1,0 +1,12 @@
+<div class="card flex-fill" [ngStyle]="{'border-color': posest.barva}" style="border-width: 2px;overflow:hidden;">
+        <img style="object-fit:cover;width:80vw;height:30vh" src={{getPosestSrc()}}>
+    <div class="card-title p-3 border bg-light" [ngStyle]="{'color': posest.barva}"><b>{{posest.ime}}</b></div>
+    <div clas="card-body d-flex">
+        <ul>
+            <li><b>cena:</b> ${{posest.cena}}</li>
+            <li><b>trenutni lastnik:</b> {{posest.trenutniLastnik.ime}}</li>
+            <li><b>hise (4 = hotel):</b> {{posest.hise}}</li>
+            <!--<li><b>doprinesena vrednost:</b> {{posest.doprinesenaVrednost}}</li>-->
+        </ul>
+    </div>
+  </div>

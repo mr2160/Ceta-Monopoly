@@ -1,0 +1,79 @@
+<div class="pb-5">
+<div style="background-color:#BFDBAE">
+    <div class="container d-flex justify-content-center p-1">
+        <img src="../../assets/slike/monopoly.png" width="80%">
+    </div>
+    <div class="carousel slide" id="carouselExampleControls" data-ride="carousel">
+        <div class="carousel-inner" style="margin-top:-10px">
+            <div class="carousel-item active">
+                <div style="justify-content: center;" class="d-flex">
+                    <app-posest-card [posest]="prvaPosest"></app-posest-card>
+                </div>
+            </div>
+            <div class="carousel-item" *ngFor="let posest of aktivnePosesti">
+                <div style="justify-content: center;" class="d-flex">
+                    <app-posest-card [posest]="posest"></app-posest-card>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+    </div>
+    <br>
+</div>
+
+<div style="background-color: #8FBC72;" class="p-2">
+    <ul class="list-group m-2">
+        <li class="list-group-item" *ngFor="let vodx of ostaliVodi"><b>{{vodx.ime}}:</b> ${{vodx.denarnoStanje}} <i class="bi bi-door-closed-fill" *ngFor="let posest of vodx.lastnePosesti" [ngStyle]="{'color': posest.barva}"></i></li>
+    </ul>
+</div>
+<div style="background-color: #668b4d;" class="p-2">
+    <ul class="list-group m-2">
+        <li class="list-group-item" *ngFor="let transakcija of vod.preteklih5transakcij" [innerHTML]="transakcija | transakcijaText">
+        </li>
+    </ul>
+</div>
+
+
+
+<nav class="navbar fixed-bottom navbar-light bg-dark" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    <div class="container-fluid justify-content-start">
+      <a class="navbar-brand" href="#" style="color:rgb(255, 255, 255)"><b style="color:darkgreen">$</b><b>{{vod.denarnoStanje}}</b></a>
+      <i class="bi bi-door-closed-fill" *ngFor="let posest of vod.lastnePosesti" [ngStyle]="{'color': posest.barva}"></i>
+      <a class="navbar-brand px-3" href="#" style="color:rgb(255, 255, 255)"><b>{{vod.ime}}</b></a>
+    </div>
+    <div class="container-fluid justify-content-center">
+        <div class="collapse text-center" id="collapseExample">
+            <div class="carousel slide" id="carouselExampleControls" data-ride="carousel">
+                <div class="carousel-inner" style="margin-top:-10px">
+                    <div class="carousel-item active">
+                        <div style="justify-content: center;" class="d-flex">
+                            <app-posest-card [posest]="prvaLastna"></app-posest-card>
+                        </div>
+                    </div>
+                    <div class="carousel-item" *ngFor="let posest of lastnePosesti">
+                        <div style="justify-content: center;" class="d-flex">
+                            <app-posest-card [posest]="posest"></app-posest-card>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </button>
+            </div>
+            <a class="btn btn-danger m-3" (click)="odjava()">Odjava</a>
+        </div>
+    </div>
+</nav>
+

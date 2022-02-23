@@ -1,0 +1,65 @@
+GET http://localhost:3000/posesti/
+###
+
+GET http://localhost:3000/vodi/
+
+###
+
+POST http://localhost:3000/posesti
+Content-Type: application/json
+
+{
+    "ime": "Cerkev",
+    "cena": 30000,
+    "barva": "00000"
+}
+
+###
+
+PATCH http://localhost:3000/posesti/lastnik/620e68e6247e743f8fe675bb
+Content-Type: application/json
+
+{
+    "novLastnikId": "620e68e6247e743f8fe675c7"
+}
+
+###
+
+GET http://localhost:3000/db/wipe
+
+###
+
+GET http://localhost:3000/db/fill
+
+###
+
+POST http://localhost:3000/vodi/Pošasteki
+Content-Type: application/json
+
+{
+    "geslo": "Buuuu-tli!"
+}
+
+###
+
+PUT http://localhost:3000/vodi/lastna/621508e3ad761956d99cd6b3
+Content-Type: application/json
+
+{
+    "posestId": "621508e3ad761956d99cd6a7"
+}
+###
+PATCH http://localhost:3000/vodi/lastna/621508e3ad761956d99cd6b3
+Content-Type: application/json
+
+{
+    "posestId": "621508e3ad761956d99cd6a7"
+}
+
+###
+PATCH http://localhost:3000/vodi/aktivne/620e68e6247e743f8fe675c7
+Content-Type: application/json
+
+{
+    "noveAktivne": ["620e68e6247e743f8fe675bb", "620e68e6247e743f8fe675bd", "620e68e6247e743f8fe675bf", "620e68e6247e743f8fe675c1"]
+}

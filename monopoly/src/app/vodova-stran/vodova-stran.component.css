@@ -1,0 +1,7 @@
+.carousel-item{
+    height: auto;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    margin-top: 2rem;
+}

@@ -1,0 +1,175 @@
+<div class="container-fluid">
+    <div class="row flex-row flex-nowrap overflow-auto row-cols-1 row-cols-lg-6 g-3 g-lg-2 p-4">
+        <app-posest-card *ngFor="let posest of posesti" [posest]="posest"></app-posest-card>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row flex-row flex-nowrap overflow-auto row-cols-1 row-cols-lg-6 g-3 g-lg-2 p-4">
+        <app-vod-card *ngFor="let vod of vodi" [vod]="vod"></app-vod-card>
+    </div>
+</div>
+<div class="container text-center my-2 py-2 border" id="Aktivne">
+    <h4><b>Spremeni aktivne posesti</b></h4>
+    <p>{{aktivneOpozorilo}}</p>
+    <div class="row d-flex justify-content-center p-2 ">
+        <div class="col m-4">
+            <select name="test" class="selectpicker" id="inputVodAkt01" #vodAkt>
+                <option selected value="">Skupina</option>
+                <option *ngFor="let vod of vodi" value="{{vod._id}}" id="vodAktivne">{{vod.ime}}</option>
+            </select>
+        </div>
+        <div class="col m-4">
+            <select class="selectpicker" id="inputPosestAkt01" #posestAkt1>
+                <option selected value="">Posest #1</option>
+                <option *ngFor="let posest of posesti" value="{{posest._id}}">{{posest.ime}}</option>
+            </select>
+        </div>
+        <div class="col m-4">
+            <select class="selectpicker" id="inputPosestAkt02" #posestAkt2>
+                <option selected value="">Posest #2</option>
+                <option *ngFor="let posest of posesti" value="{{posest._id}}">{{posest.ime}}</option>
+            </select>
+        </div>
+        <div class="col m-4">
+            <select class="selectpicker" id="inputPosestAkt03" #posestAkt3>
+                <option selected value="">Posest #3</option>
+                <option *ngFor="let posest of posesti" value="{{posest._id}}">{{posest.ime}}</option>
+            </select>
+        </div>
+        <div class="col m-4">
+            <select class="selectpicker" id="inputPosestAkt04" #posestAkt4>
+                <option selected value="">Posest #4</option>
+                <option *ngFor="let posest of posesti" value="{{posest._id}}">{{posest.ime}}</option>
+            </select>
+        </div>
+        <div class="row justify-content-center">
+            <button type="button" class="btn btn-primary m-4" (click)="posljiNoveAktivne();openModal()">Izvedi</button>
+        </div>
+    </div>
+
+</div>
+<div class="container text-center border py-2 my-2" id="Aktivne">
+    <h4><b>Izvedi nakup posesti</b></h4>
+    <p>{{nakupOpozorilo}}</p>
+    <div class="row d-flex justify-content-center">
+        <div class="col m-4">
+            <select name="test" class="selectpicker" id="inputVodAkt01" #vodNakup>
+                <option selected value="">Skupina</option>
+                <option *ngFor="let vod of vodi" value="{{vod._id}}" id="vodAktivne">{{vod.ime}}</option>
+            </select>
+        </div>
+        <div class="col m-4">
+            <select class="selectpicker" id="inputPosestAkt01" #posestNakup>
+                <option selected value="">Posest</option>
+                <option *ngFor="let posest of posesti" value="{{posest._id}}">{{posest.ime}}</option>
+            </select>
+        </div>
+        <div class="row justify-content-center">
+            <button type="button" class="btn btn-primary" (click)="izvediNakup();openModal()">Izvedi</button>
+        </div>
+    </div>
+    
+</div>
+<div class="container text-center border py-2 my-2" id="Kraja">
+    <h4><b>Izvedi krajo</b></h4>
+    <p>{{transOpozorilo}}</p>
+    <div class="row d-flex justify-content-center">
+        <div class="col-2 m-4">
+            <select name="test" class="selectpicker" id="inputVodAkt01" #dobitnik>
+                <option selected value="">Dobitnik</option>
+                <option *ngFor="let vod of vodi" value="{{vod._id}}" id="vodAktivne">{{vod.ime}}</option>
+            </select>
+        </div>
+        <div class="col-2 m-4">
+            <select class="selectpicker" id="inputPosestAkt01" #zrtev>
+                <option selected value="">Žrtev</option>
+                <option *ngFor="let vod of vodi" value="{{vod._id}}">{{vod.ime}}</option>
+            </select>
+        </div>
+        <div class="col-2 m-4">
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="20000" #znesek>
+        </div>
+        <div class="row justify-content-center">
+            <button type="button" class="btn btn-primary" (click)="izvediTransakcijo();openModal()">Izvedi</button>
+        </div>
+    </div>
+    
+</div>
+<div class="container text-center my-2 py-2 border" id="Kraja">
+    <h4><b>Dodaj hiše</b></h4>
+    <p>{{hisaOpozorilo}}</p>
+    <div class="row d-flex justify-content-center">
+        <div class="col m-4">
+            <select name="test" class="selectpicker" id="inputVodAkt01" #posestHisa>
+                <option selected value="">Posest</option>
+                <option *ngFor="let posest of posesti" value="{{posest._id}}" id="vodAktivne">{{posest.ime}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+            <button type="button" class="m-2 col btn btn-success" (click)="dodajHiso();openModal()">Dodaj</button>
+            <button type="button" class="m-2 col btn btn-danger" (click)="odstraniHiso();openModal()">Odvzemi</button>
+    </div>   
+</div>
+<div class="container text-center border py-2 my-2" id="Prenocitev">
+    <h4><b>Prenočitev</b></h4>
+    <p>{{prenocitevOpozorilo}}</p>
+    <div class="row d-flex justify-content-center">
+        <div class="col-2 m-4">
+            <select name="test" class="selectpicker" id="inputVodAkt01" #posestPrenocitev>
+                <option selected value="">Posest</option>
+                <option *ngFor="let posest of posesti" value="{{posest._id}}" id="vodAktivne">{{posest.ime}}</option>
+            </select>
+        </div>
+        <div class="col-2 m-4">
+            <select class="selectpicker" id="inputPosestAkt01" #obiskovalec>
+                <option selected value="">Obiskovalec</option>
+                <option *ngFor="let vod of vodi" value="{{vod._id}}">{{vod.ime}}</option>
+            </select>
+        </div>
+        <div class="row justify-content-center">
+            <button type="button" class="btn btn-primary" (click)="izvediPrenocitev();openModal()">Izvedi</button>
+        </div>
+    </div>
+</div>
+
+<div class="container text-center my-2 py-2 border" id="PI">
+    <h4><b>Priložnosti in izzivi</b></h4>
+    <p>{{piOpozorilo}}</p>
+    <div class="row d-flex justify-content-center">
+        <div class="col-2 m-4">
+            <select class="selectpicker" id="inputPosestAkt01" #piVod>
+                <option selected value="">Skupina</option>
+                <option *ngFor="let vod of vodi" value="{{vod._id}}">{{vod.ime}}</option>
+            </select>
+        </div>
+        <div class="col-2 m-4">
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="20000" #piZnesek>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+            <button type="button" class="m-2 col btn btn-success" (click)="priloznost();openModal()">Priložnost</button>
+            <button type="button" class="m-2 col btn btn-danger" (click)="izziv();openModal()">Izziv</button>
+    </div>   
+</div>
+
+
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display':displayStyle}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Evo, poslal si stvari. Prosim še osveži stran, da bo delala na zadnjih podatkih</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" 
+                (click)="reload()">
+          Osveži
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

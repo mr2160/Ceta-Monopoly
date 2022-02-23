@@ -1,0 +1,11 @@
+<div class="card">
+    <div class="card-title p-3 border bg-light"><b>{{vod.ime}}</b></div>
+    <div clas="card-body d-flex">
+        <ul>
+            <li><b>stanje:</b> {{vod.denarnoStanje}} €</li>
+            <li><b>zadnja transakcija:</b> {{vod.preteklih5transakcij[0]}}</li>
+            <li><b>aktivne posesti:</b> <ul><li *ngFor="let posest of vod.aktivnePosesti">{{posest.ime}}</li></ul></li>
+            <li><b>posesti v lasti:</b> <ul><li *ngFor="let posest of vod.lastnePosesti">{{posest.ime}}</li></ul></li>
+        </ul>
+    </div>
+  </div>
