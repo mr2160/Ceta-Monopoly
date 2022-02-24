@@ -3,7 +3,7 @@
     <div class="container d-flex justify-content-center p-1">
         <img src="../../assets/slike/monopoly.png" width="80%">
     </div>
-    <div class="carousel slide" id="carouselExampleControls" data-ride="carousel">
+    <!--<div class="carousel slide" id="carouselExampleControls" data-ride="carousel">
         <div class="carousel-inner" style="margin-top:-10px">
             <div class="carousel-item active">
                 <div style="justify-content: center;" class="d-flex">
@@ -24,6 +24,14 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
             </button>
+    </div>-->
+    <div class="row flex-row flex-nowrap overflow-auto m-2">
+        <div style="justify-content: center;" class="d-flex">
+            <app-posest-card [posest]="prvaPosest"></app-posest-card>
+        </div>
+        <div style="justify-content: center;" class="d-flex" *ngFor="let posest of aktivnePosesti">
+            <app-posest-card [posest]="posest"></app-posest-card>
+        </div>
     </div>
     <br>
 </div>
@@ -50,7 +58,7 @@
     </div>
     <div class="container-fluid justify-content-center">
         <div class="collapse text-center" id="collapseExample">
-            <div class="carousel slide" id="carouselExampleControls" data-ride="carousel">
+            <!--<div class="carousel slide" id="carouselExampleControls" data-ride="carousel">
                 <div class="carousel-inner" style="margin-top:-10px">
                     <div class="carousel-item active">
                         <div style="justify-content: center;" class="d-flex">
@@ -71,8 +79,17 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                     </button>
-            </div>
+            </div>-->
+
             <a class="btn btn-danger m-3" (click)="odjava()">Odjava</a>
+            <div class="row flex-row flex-nowrap overflow-auto justify-content-start">
+                <div style="justify-content: center;" class="d-flex">
+                    <app-posest-card [posest]="prvaLastna"></app-posest-card>
+                </div>
+                <div style="justify-content: center;" class="d-flex" *ngFor="let posest of lastnePosesti">
+                    <app-posest-card [posest]="posest"></app-posest-card>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
