@@ -1,4 +1,4 @@
-GET http://localhost:3000/posesti/
+GET https://komenda-monopoly.herokuapp.com/posesti/
 ###
 
 GET http://localhost:3000/vodi/
@@ -25,11 +25,11 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3000/db/wipe
+GET http://localhost:3000/dbapi/wipe
 
 ###
 
-GET http://localhost:3000/db/fill
+GET http://localhost:3000/dbapi/fill
 
 ###
 
