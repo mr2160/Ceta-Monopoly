@@ -26,7 +26,7 @@ export class ModeratorStranComponent implements OnInit {
 
   @ViewChild('dobitnik') dobitnik: ElementRef;
   @ViewChild('zrtev') zrtev: ElementRef;
-  @ViewChild('znesek') znesek: ElementRef;
+  
 
   @ViewChild('posestHisa') posestHisa: ElementRef;
 
@@ -131,9 +131,9 @@ export class ModeratorStranComponent implements OnInit {
 
     var dobitnikId = this.dobitnik.nativeElement.value
     var zrtevId = this.zrtev.nativeElement.value
-    var znesek = this.znesek.nativeElement.value
+    var znesek =5000
 
-    if(dobitnikId=="" || zrtevId=="" || znesek==""){
+    if(dobitnikId=="" || zrtevId==""){
       console.log(znesek)
       this.transOpozorilo = "Izpolni vsa polja!"
       return
@@ -270,9 +270,9 @@ export class ModeratorStranComponent implements OnInit {
     }
 
     concat(
-      this.posestiService.spremeniStanje(vodId, (znesek as number)),
-      this.posestiService.dodajTransakcijo(vodId, (znesek as number) + ":Banka: priložnost")
-    ).subscribe({next: ()=>{this.transOpozorilo = "Uspešno!"}, error: ()=>{this.transOpozorilo = "Nekaj je šlo narobe!"}})
+      this.posestiService.spremeniStanje(vodId, +(znesek as number)),
+      this.posestiService.dodajTransakcijo(vodId, +(znesek as number) + ":Banka: priložnost")
+    ).subscribe({next: ()=>{this.piOpozorilo = "Uspešno!"}, error: ()=>{this.piOpozorilo = "Nekaj je šlo narobe!"}})
 
   }
 

@@ -4,6 +4,7 @@ const Vodi = require('../models/vodi.js')
 const Posesti = require('../models/posesti.js')
 //Get all
 router.get('/', async (req, res) => {
+    console.log("GET all vodi")
     try{
         const vodi = await Vodi.find()
         res.json(vodi)
@@ -14,6 +15,7 @@ router.get('/', async (req, res) => {
 
 //Get one
 router.get('/:id', async (req, res) => {
+    console.log("GET vod: ", req.body.id)
     try{
         const vod = await Vodi.findById(req.params.id)
         res.json(posest)
@@ -47,6 +49,7 @@ router.patch('/:id', async (req, res) => {
 
 //Auth one
 router.post('/:ime', async (req, res) => {
+    console.log("AUTH vod: ", req.params.ime)
     try{
         const vod = await Vodi.findOne({"ime": req.params.ime})
         if(vod.geslo == req.body.geslo){
@@ -61,17 +64,16 @@ router.post('/:ime', async (req, res) => {
 
 //Update stanje
 router.patch('/stanje/:id', async (req, res) => {
-    console.log("stanje")
+    console.log("UPDATE vodovo stanje: ")
     if(req.body.stanje == null){
         res.status(400).json({message: "No stanje parameter."
     })}
     try{
         
         const vod = await Vodi.findById(req.params.id)
-        console.log(vod.denarnoStanje)
         vod.denarnoStanje = vod.denarnoStanje + req.body.stanje 
+        console.log("   -->", vod.ime, req.body.stanje)
         vod.save()
-        console.log(vod.denarnoStanje)
         res.status(200).json(vod)
     }catch(err){
         res.status(500).json({message: err})
@@ -80,7 +82,7 @@ router.patch('/stanje/:id', async (req, res) => {
 
 //Add lastnaPosest
 router.put('/lastna/:id', async (req, res) => {
-    console.log("add")
+    console.log("ADD lastna posest: ")
     if(req.body.posestId == null){
         res.status(400).json({message: "No posestId parameter."}
     )}
@@ -90,19 +92,19 @@ router.put('/lastna/:id', async (req, res) => {
         const posest = await Posesti.findById(req.body.posestId)
 
         if(vod.lastnePosesti.indexOf(posest) == -1){
-            console.log("Adding:" + posest.ime + "to" + vod.ime)
+            console.log("   ---> Adding:" + posest.ime + "to" + vod.ime)
             vod.lastnePosesti.push(posest)
             vod.save()
         }
         res.status(200).json(vod)
     }catch(err){
-        console.log(err)
         res.status(500).json({message: err})
     } 
 })
 
 //Remove lastnaPosest
 router.patch('/lastna/:id', async (req, res) => {
+    console.log("REMOVE lastna posest: ")
     if(req.body.posestId == null){
         res.status(400).json({message: "No posestId parameter."}
     )}
@@ -111,13 +113,13 @@ router.patch('/lastna/:id', async (req, res) => {
         
         const vod = await Vodi.findById(req.params.id)
         const posest = await Posesti.findById(req.body.posestId)
-        
+
         var result = vod.lastnePosesti.filter(obj => {
             return obj._id.toString() === req.body.posestId
         })
 
         if(result.length == 1){
-            console.log("Removing:" + result[0].ime + "from" + vod.ime)
+            console.log("   --> Removing:" + result[0].ime + "from" + vod.ime)
             const index = vod.lastnePosesti.indexOf(result[0])
             vod.lastnePosesti.splice(index, 1)
             vod.save()
@@ -132,12 +134,15 @@ router.patch('/lastna/:id', async (req, res) => {
 
 //Update aktivne
 router.patch('/aktivne/:id', async (req, res) => {
+    console.log("UPDATE aktivne: ")
     if(req.body.noveAktivne == null){
         res.status(400).json({message: "No noveAktivne parameter."
     })}
 
     try{
         const vod = await Vodi.findById(req.params.id)
+        console.log("   -->", vod.ime)
+
         if(!(req.body.noveAktivne instanceof Array) || !(req.body.noveAktivne.length == 4)){
             res.status(400).json({message: "Invalid input"})
         } else{
@@ -145,6 +150,7 @@ router.patch('/aktivne/:id', async (req, res) => {
             vod.aktivnePosesti.splice(0, vod.aktivnePosesti.length)
             for (const posestId of req.body.noveAktivne){
                 const posest = await Posesti.findById(posestId);
+                console.log("       -->", posest.ime)
                 vod.aktivnePosesti.push(posest)
             }
             vod.save()
@@ -157,8 +163,10 @@ router.patch('/aktivne/:id', async (req, res) => {
 
 //GET aktivne
 router.get('/aktivne/:id', async (req, res) => {
+    console.log("GET aktivne:")
     try{
         const vod = await Vodi.findById(req.params.id)
+        console.log("   -->", vod.ime)
         res.status(200).json(vod.aktivnePosesti)
     } catch(err){
         res.status(500).json({message: err})
@@ -167,12 +175,14 @@ router.get('/aktivne/:id', async (req, res) => {
 
 //PUT transakcija
 router.put('/trans/:id', async (req, res) => {
+    console.log("ADD transaction:")
     if(req.body.transakcija == null){
         res.status(400).json({message: "No transakcija parameter."}
     )}
     
     try{
         const vod = await Vodi.findById(req.params.id)
+        console.log("   --> Adding: ", req.body.transakcija, "to ", vod.ime)
         if(vod.preteklih5transakcij.length < 5){
             vod.preteklih5transakcij.unshift(req.body.transakcija)
         }else{
