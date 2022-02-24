@@ -1,19 +1,21 @@
 {
-  "name": "ceta-monopoly",
+  "name": "monopoly-api",
   "version": "1.0.0",
   "description": "",
-  "main": "monopoly/index.js",
+  "main": "server.js",
   "scripts": {
-    "poskus": "cd monopoly && ng build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mr2160/-eta-Monopoly.git"
+    "start": "node ./www",
+    "buildAngular": "buildAngular.sh"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mr2160/-eta-Monopoly/issues"
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "mongoose": "^6.2.1"
   },
-  "homepage": "https://github.com/mr2160/-eta-Monopoly#readme"
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
+  }
 }

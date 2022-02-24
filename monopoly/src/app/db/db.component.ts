@@ -23,6 +23,6 @@ export class DbComponent implements OnInit {
   }
 
   fill(){
-    this.podatki.fill().subscribe({next: ()=>{this.opozorilo = "Uspešno napolnjeno!"}, error: ()=>{this.opozorilo = "Nekaj je šlo narobe!"}})
+    this.podatki.fill().subscribe({next: ()=>{this.opozorilo = "Uspešno napolnjeno!"}, error: (e)=>{this.opozorilo = "Nekaj je šlo narobe!";console.log(e)}})
   }
 }

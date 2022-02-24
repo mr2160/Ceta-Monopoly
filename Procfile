@@ -1,1 +1,0 @@
-web: node /monopoly-api/server.js
