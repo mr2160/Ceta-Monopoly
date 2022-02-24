@@ -8,7 +8,7 @@ import { Vod } from '../classes/vodi';
 })
 export class PosestiPodatkiService {
 
-  private uri = "http://localhost:3000/"
+  private uri = "https://komenda-monopoly.herokuapp.com/"
   constructor(private http: HttpClient) { }
 
   getAllPosesti(){
