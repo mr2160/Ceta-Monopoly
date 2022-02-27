@@ -116,11 +116,11 @@ export class ModeratorStranComponent implements OnInit {
       console.log(vodKupecId, posest.trenutniLastnik.id, posestId)
       concat(
         this.posestiService.spremeniStanje(vodKupecId, -(posest.cena as number)),
-        this.posestiService.spremeniStanje(posest.trenutniLastnik.id, posest.cena as number),
+        this.posestiService.spremeniStanje(posest.trenutniLastnik.id, +(posest.cena as number)),
         this.posestiService.addLastnaPosest(vodKupecId, posestId),
         this.posestiService.removeLastnaPosest(posest.trenutniLastnik.id, posestId),
         this.posestiService.dodajTransakcijo(vodKupecId, -(posest.cena as number) + ":" + posest.trenutniLastnik.ime + ":" + posest.ime),
-        this.posestiService.dodajTransakcijo(posest.trenutniLastnik.id, (posest.cena as number) + ":" + vodKupec.ime + ":" + posest.ime),
+        this.posestiService.dodajTransakcijo(posest.trenutniLastnik.id, +(posest.cena as number) + ":" + vodKupec.ime + ":" + posest.ime),
         this.posestiService.patchLastnik(posestId, vodKupecId),
       ).subscribe({next: ()=>{this.nakupOpozorilo = "Uspešno!"}, error: ()=>{this.nakupOpozorilo = "Nekaj je šlo narobe!"}})
     }
