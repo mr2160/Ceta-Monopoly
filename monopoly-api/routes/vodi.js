@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 
 //Get one
 router.get('/:id', async (req, res) => {
-    console.log("GET vod: ", req.body.id)
+    //console.log("GET vod: ", req.body.id)
     try{
         const vod = await Vodi.findById(req.params.id)
         res.json(posest)
@@ -49,7 +49,7 @@ router.patch('/:id', async (req, res) => {
 
 //Auth one
 router.post('/:ime', async (req, res) => {
-    console.log("AUTH vod: ", req.params.ime)
+    //console.log("AUTH vod: ", req.params.ime)
     try{
         const vod = await Vodi.findOne({"ime": req.params.ime})
         if(vod.geslo == req.body.geslo){

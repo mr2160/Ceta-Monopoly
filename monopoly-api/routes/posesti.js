@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
 
 //Get one
 router.get('/:id', async (req, res) => {
-    console.log("GET one posest:")
+    //console.log("GET one posest:")
     try{
         const posest = await Posesti.findById(req.params.id)
         console.log("   -->", posest.ime)
