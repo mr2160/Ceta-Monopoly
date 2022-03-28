@@ -4,7 +4,7 @@
  
  Šlo je za igro, v kateri so po skupinicah hodili po Kamniku in "nakupovali" posesti.
  
- Ker sem stvar pripravljal cca. 1 teden pred dejansko igro, je njena funkcionalnost samo v prikazu trenutnega stanja za vsako skupino:
+ Ker sem stvar pripravljal cca. 1 teden pred dejansko igro (po uricah tu pa tam, faks ima le prednost), je njena funkcionalnost samo v prikazu trenutnega stanja za vsako skupino:
  - Katere posesti lahko v tem trenutnku obiščejo,
  - koliko denarja imajo on in drugi,
  - katere posesti imajo v lasti in koliko hiš na njih,
