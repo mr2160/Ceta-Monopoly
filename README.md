@@ -1,4 +1,4 @@
-# ceta-monopoly
+# Monopoly za četo - Skavti Komenda
  
  Projekt za igro na skavtskem taboru 25-27.2.2022.
  
@@ -14,3 +14,15 @@ Samo urejanje podatkov je izvajal moderator iz svoje strani, njemu pa so vodje s
  
  Stiska s časom je botrovala mnogim drugim neumnostim in slabim praksam: shranjevanje gesel za skupine v obliki čistega teksta, nerodni klici na API...
  Za večino stvari sem precenil, da bodo dovolj dobre za eno izvedbo s petimi skupinami - kar se je tudi zgodilo. Otroci so uživali in si bodo dogodek zapomnili.
+
+## Testna uporaba
+Spletna stran je postavljena na mestu: https://komenda-monopoly.herokuapp.com
+1. Spletna stran je bila ustvarjena samo s telefoni v mislih -> otroci so bili na terenu. Najbolje da z orodji za razvijalce odprete v načinu za telefon.
+2. Prijava:
+   - Uporabniško ime: Pošasteki 
+   - Geslo: Buuuu-tli!
+3. Uporaba:
+   - Prvi odsek so posesti, ki jih skupina v danem trenutku lahko obišče (drsamo v desno za pregled vseh).
+   - Drugi odsek so denarna stanja vseh skupin in katere barve posesti imajo v lasti.
+   - Tretji odsek je zdanjih 5 transakcij skupine.
+   - Orodna vrstica kaže denarno stanje, če nanjo kliknemo se nam pa odpre meni s posestmi v lasti (drsamo v desno za pregled vseh).
