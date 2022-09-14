@@ -4,7 +4,7 @@
  
  Šlo je za igro, v kateri so po skupinicah hodili po Kamniku in "nakupovali" posesti.
  
- Ker sem stvar pripravljal cca. 1 teden pred dejansko igro (po uricah tu pa tam, faks ima le prednost), je njena funkcionalnost samo v prikazu trenutnega stanja za vsako skupino:
+ Vsaka skupina je z obiskom spletne strani lahko preverjala stanje igre:
  - Katere posesti lahko v tem trenutnku obiščejo,
  - koliko denarja imajo on in drugi,
  - katere posesti imajo v lasti in koliko hiš na njih,
@@ -12,12 +12,11 @@
 
 Samo urejanje podatkov je izvajal moderator iz svoje strani, njemu pa so vodje skupin poslale sporočilo po drugem kanalu (discord), ko so želeli opraviti nakup, prenočitev, krajo...
  
- Stiska s časom je botrovala mnogim drugim neumnostim in slabim praksam: shranjevanje gesel za skupine v obliki čistega teksta, nerodni klici na API...
- Za večino stvari sem precenil, da bodo dovolj dobre za eno izvedbo s petimi skupinami - kar se je tudi zgodilo. Otroci so uživali in si bodo dogodek zapomnili.
+Igra je super uspela. Otroci so uživali in si bodo dogodek zapomnili.
 
 ## Testna uporaba
 Spletna stran je postavljena na mestu: https://komenda-monopoly.herokuapp.com
-1. Spletna stran je bila ustvarjena samo s telefoni v mislih -> otroci so bili na terenu. Najbolje da z orodji za razvijalce odprete v načinu za telefon.
+1. Spletna stran je bila ustvarjena samo s telefoni v mislih -> otroci so bili na terenu. Najbolje, da z orodji za razvijalce odprete v načinu za telefon.
 2. Prijava:
    - Uporabniško ime: Pošasteki 
    - Geslo: Buuuu-tli!
